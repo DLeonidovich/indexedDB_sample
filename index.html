@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My IndexedDB</title>
+    <link rel="stylesheet" href="./css/_null_style.css">
+    <link rel="stylesheet" href="./css/idexedDB.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="wrapper">
+            <section id="form-section">
+                <form id="db-form" name="db-form" data-doors-tm="TM KORFAD">
+                    <fieldset>
+                        <div class="db-form-inputs">
+                            <div class="flex-wrapper">
+                                <div id="db-form-date">Date: &nbsp;<span></span></div>
+                                <div id="tm-picture"><img id="tm-logo-pic" src="./img/darumi/DARUMI_Logo.svg" alt=""></div>    
+                            </div>
+                            
+                            <H1>INTERIOR DOORS IndexedDB sample</H1>
+                            <h2>Doors stock form</h2>
+                            
+                            <template>
+                                <div class="db-form-section">
+                                    <label for=""></label>
+                                    <select name="" class="select-door" id="" data-properties="" disabled=""></select>
+                                </div>
+                            </template>
+                            
+                            <div class="db-form-section">
+                                <div class="flex-wrapper">
+                                    <div>
+                                        <label for="check-in-stock">In stock:</label>
+                                        <input type="checkbox" class="check-box" id="check-in-stock" data-properties="toReset"></input>
+                                    </div>
+                                    <span id="create-date"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="flex-wrapper">
+                            <div class="db-form-section buttons">
+                                <input type="button" value="Add to DB" class="button" id="addButton" title="Add door to the database">
+                            </div>
+                            <div class="db-form-section buttons">
+                                <input type="button" value="Update" class="button" id="uppdButton" title="Update selected record to the database">
+                            </div>
+                            <div class="db-form-section buttons">
+                                <input type="button" value="Get list" class="button" id="getButton" title="Get / Refresh door records form the database">
+                                <span id="loading">Loading...</span>
+                            </div>
+                            <div class="db-form-section buttons">
+                                <input type="button" value="Clear" class="button" id="clearButton" title="Clear the form">
+                            </div>
+                            <div class="db-form-section buttons">
+                                <input type="button" value="Delete" class="button" id="delButton" title="Delete selected record from the database">
+                            </div>
+                            <div class="db-form-section buttons">
+                                <input type="button" value="Backup" class="button" id="bkupButton" title="Backup database">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+            <section id="list-section">
+                <div id="doors-list">
+                    <div id="doors-list-table"></div>
+                </div>
+            </section>            
+        </div>
+    </div>
+    <script type="module" src="./js/indDB_backup.js"></script>
+    <script type="module" src="./js/indDB_data.js"></script>
+    <script type="module" src="./js/indDB_main.js"></script>
+    <script type="module" src="./js/indDB_inp_list.js"></script>
+    <script type="module" src="./js/indDB_db_work.js"></script>
+
+</body>
+</html>

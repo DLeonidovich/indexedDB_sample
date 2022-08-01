@@ -1,0 +1,198 @@
+body {    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+}
+.container {    
+    max-width: 1400px;
+    margin: 0 auto;
+}
+h1, h2 {
+    letter-spacing: 0.3vh;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0 0 15px 0;
+}
+h2 {
+    font-size: 1.2em;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+@media (max-width: 800px){
+    .wrapper {     
+        grid-template-columns: 1fr;
+    }
+}
+
+.flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+#tm-picture {
+    max-width: 30%;
+    height: 80px;
+}
+#tm-picture > img {
+    width: 100%;
+    max-height: 100px;
+}
+
+#db-form-date {
+    margin: 0 0 30px 0;
+}
+
+#db-form {
+    padding: 25px 30px 25px 30px;
+}
+
+.db-form-section {
+    margin: 0 0 20px 0;
+}
+
+.db-form-section label {
+    display: inline-block;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    line-height: 24px;
+}
+
+.db-form-section .select-door {
+    display: block;
+    font-size: 1em;
+    border: 1px solid #aaa;
+    padding: 0.6em 1.4em .5em .8em; 
+    width: 100%; 
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: 4px;
+    background-color: rgb(252, 252, 252);
+
+}
+.select-door {
+    text-transform: uppercase;
+}
+
+.db-form-inputs {
+    margin: 0 0 40px 0;
+}
+
+#check-in-stock {
+    position: relative;
+    top: 6px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 10px;
+}
+
+.buttons {
+    position: relative;
+}
+
+.button {
+    display: inline-block;
+    border: 1px solid gray;
+    border-radius: 4px;
+    background: radial-gradient(ellipse at top, #dcdada, transparent),
+                radial-gradient(ellipse at bottom, #a0a0a0, transparent);
+    padding: 4px 15px;
+    font-size: 1em;
+}
+.button:active {
+    border-style: outset;
+}
+.button:hover {
+    background-color: rgb(174, 174, 174);
+}
+
+/*form[data-doors-tm="KORFAD"],*/ .container[data-doors-tm="KORFAD"]{
+    background: linear-gradient(#8b9da9, #fff6e4);
+}
+/*form[data-doors-tm="LEADOR"],*/ .container[data-doors-tm="LEADOR"] {
+    background: linear-gradient(45deg, rgba(194, 233, 221, 0.5) 1%, rgba(104, 119, 132, 0.5) 100%), linear-gradient(-45deg, #494d71 0%, rgba(217, 230, 185, 0.5) 80%);
+}
+/*form[data-doors-tm="DARUMI"],*/ .container[data-doors-tm="DARUMI"] {
+    background: linear-gradient(to right, #50747caf, #6a5ba967);
+}
+/*form[data-doors-tm="OMEGA"],*/ .container[data-doors-tm="OMEGA"] {
+    background: radial-gradient(ellipse at top left, rgba(105,155,200,1) 0%,rgba(181,197,216,1) 57%);
+}
+
+#doors-list {
+    padding: 15px;
+    min-width: 800px;
+    overflow-x: auto;
+}
+
+#loading {
+    position: absolute;
+    display: none;
+    z-index: 10;    
+    top: -50px;
+    left: 50px;
+    background-color: #fff;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: 1px dotted gray;
+}
+
+table {
+    width: 100%;    
+    color: #808080;
+    background-color: #fff;
+    font-size: 0.8em;
+    overflow-x: scroll;
+    cursor: pointer;
+}
+tr:nth-child(1) {
+    cursor: default;
+}
+th, td {
+    text-align: left;
+    padding: 0 10px;
+    border-right: 1px dotted grey;
+}
+th:hover[data-thHover="yes"]{
+    background-color: #a0a0a0;
+    color: white;
+    cursor: pointer;
+}
+th:last-child, td:last-child {
+    border-right: none;
+}
+tr:nth-child(n+2)[data-is-active="active"] {
+    background-color: #8fa799;
+    color: #fff;
+}
+
+tr[data-tm="TM KORFAD"] {
+    background-color: #f9ffbc;
+}
+tr:nth-child(even)[data-tm="TM KORFAD"] {
+    background-color: #c8cba8;
+}
+tr[data-tm="TM LEADOR"] {
+    background-color: #e3e6ff;
+}
+tr:nth-child(even)[data-tm="TM LEADOR"] {
+    background-color: #c1c4de;
+}
+tr[data-tm="TM DARUMI"] {
+    background-color: #e3ffe5;
+}
+tr:nth-child(even)[data-tm="TM DARUMI"] {
+    background-color: #c1d4c2;
+}
+tr[data-tm="TM OMEGA"] {
+    background-color: #f9eec6;
+}
+tr:nth-child(even)[data-tm="TM OMEGA"] {
+    background-color: #ded6ba;
+}
+
+tr:nth-child(n+2):hover {
+    background-color: #808080;
+    color: #fff;
+}
