@@ -2,6 +2,10 @@ import { doors, DD } from "./indDB_data.js";
 import { tmChosenHandler, makeOptionsList, CreateOptionsLists } from "./indDB_inp_list.js";
 import { bkup } from "./indDB_backup.js";
 
+document.addEventListener("DOMContentLoaded", () => {
+    if(!window.indexedDB) console.log("This browser doesn't support IndexedDB");
+});
+
 let db = null;
 let dbOpenReq = indexedDB.open("intDoorsDB", 4);
 
