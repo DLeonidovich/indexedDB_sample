@@ -26,7 +26,7 @@ dbOpenReq.addEventListener("upgradeneeded", (ev) => {  // if UPGRADENEEDED
         doors.dbStorNames().forEach(store => {
             if (!db.objectStoreNames.contains(store)) {
                 let objStore = db.createObjectStore(store, {
-                    keyPath: "id",
+                    keyPath: "id", // as option { keyPath: "id", autoIncrement: true }
                 });
                 createIndxsForFolders(objStore);
             } else {
