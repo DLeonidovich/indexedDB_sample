@@ -3,10 +3,6 @@ body {
     font-size: 1em;
     line-height: 1.5;
 }
-.container {    
-    max-width: 1400px;
-    margin: 0 auto;
-}
 h1, h2 {
     letter-spacing: 0.3vh;
     text-align: center;
@@ -16,12 +12,15 @@ h1, h2 {
 h2 {
     font-size: 1.2em;
 }
+.container {
+    margin: 0 auto;
+}
 .wrapper {
     min-width: 100%;
     display: flex;
-    
+    justify-content: flex-start;
 }
-@media (max-width: 800px){
+@media (max-width: 1200px){
     .wrapper {     
         flex-direction: column;
     }
@@ -29,13 +28,21 @@ h2 {
 fieldset {
     border-style: hidden;
 }
+#form-section {
+    
+}
+#list-section {
+    padding: 15px 30px;
+
+}
 
 .flex-wrapper {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 #tm-picture {
-    max-width: 30%;
+    max-width: 40%;
     height: 80px;
 }
 #tm-picture > img {
@@ -51,20 +58,20 @@ fieldset {
     padding: 25px 30px 25px 30px;
 }
 
-.db-form-section {
+.db-form-section {    
     margin: 0 0 20px 0;
 }
 
 .db-form-section label {
     display: inline-block;
     font-weight: 600;
-    margin: 0 0 10px 0;
+    margin: 0 0 6px 0;
     line-height: 24px;
 }
 
 .db-form-section .select-door {
     display: block;
-    font-size: 1em;
+    font-size: .8em;
     border: 1px solid #aaa;
     padding: 0.6em 1.4em .5em .8em; 
     width: 100%; 
@@ -79,6 +86,10 @@ fieldset {
 
 .db-form-inputs {
     margin: 0 0 40px 0;
+    width: 400px;
+}
+#buttons {
+    width: 400px;
 }
 
 #check-in-stock {
@@ -123,11 +134,6 @@ fieldset {
     background: radial-gradient(ellipse at top left, rgba(105,155,200,1) 0%,rgba(181,197,216,1) 57%);
 }
 
-#doors-list {
-    padding: 15px;    
-    overflow-x: auto;
-}
-
 #loading {
     position: absolute;
     display: none;
@@ -140,15 +146,19 @@ fieldset {
     font-weight: 600;
     border: 1px dotted gray;
 }
-
-table {
-    width: 100%;    
+#doors-list {
+    padding: 15px;
+}
+table {    
     color: #808080;
     background-color: #fff;
     font-size: 0.8em;
-    overflow-x: scroll;
     cursor: pointer;
+    overflow: scroll;
 }
+
+
+
 tr:nth-child(1) {
     cursor: default;
 }
