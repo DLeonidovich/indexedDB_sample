@@ -25,7 +25,7 @@ h2 {
         flex-direction: column;
     }
     #list-section {
-        padding: 15px 30px 15px 30px;
+        margin: 0 0 0 30px;
     
     }
 }
