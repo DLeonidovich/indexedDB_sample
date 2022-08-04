@@ -17,13 +17,20 @@ h2 {
     font-size: 1.2em;
 }
 .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+    min-width: 100%;
+    display: flex;
+    
 }
 @media (max-width: 800px){
     .wrapper {     
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
+}
+#form-section {
+
+}
+fieldset {
+    border-style: hidden;
 }
 
 .flex-wrapper {
@@ -106,22 +113,21 @@ h2 {
     background-color: rgb(174, 174, 174);
 }
 
-/*form[data-doors-tm="KORFAD"],*/ .container[data-doors-tm="KORFAD"]{
+/*form[data-doors-tm="KORFAD"],*/ .wrapper[data-doors-tm="KORFAD"]{
     background: linear-gradient(#8b9da9, #fff6e4);
 }
-/*form[data-doors-tm="LEADOR"],*/ .container[data-doors-tm="LEADOR"] {
+/*form[data-doors-tm="LEADOR"],*/ .wrapper[data-doors-tm="LEADOR"] {
     background: linear-gradient(45deg, rgba(194, 233, 221, 0.5) 1%, rgba(104, 119, 132, 0.5) 100%), linear-gradient(-45deg, #494d71 0%, rgba(217, 230, 185, 0.5) 80%);
 }
-/*form[data-doors-tm="DARUMI"],*/ .container[data-doors-tm="DARUMI"] {
+/*form[data-doors-tm="DARUMI"],*/ .wrapper[data-doors-tm="DARUMI"] {
     background: linear-gradient(to right, #50747caf, #6a5ba967);
 }
-/*form[data-doors-tm="OMEGA"],*/ .container[data-doors-tm="OMEGA"] {
+/*form[data-doors-tm="OMEGA"],*/ .wrapper[data-doors-tm="OMEGA"] {
     background: radial-gradient(ellipse at top left, rgba(105,155,200,1) 0%,rgba(181,197,216,1) 57%);
 }
 
 #doors-list {
-    padding: 15px;
-    min-width: 800px;
+    padding: 15px;    
     overflow-x: auto;
 }
 
