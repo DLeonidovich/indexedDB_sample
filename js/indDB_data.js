@@ -1,5 +1,6 @@
 let DD = {
-    // html elements 
+    // html elements
+    wrapper:  () => {return document.querySelector(".wrapper")}, 
     container:  () => {return document.querySelector(".container")},
     templ:  () => {return document.querySelector("template")},
     form:   () => {return document.forms[0]},
@@ -26,8 +27,9 @@ let DD = {
 
     // methods
     date: () => {
-        let dt = new Date();
-        return dt.getFullYear() + "-" + (dt.getMonth()+1) + "-" +  dt.getDate() + " Time: " + dt.getHours() + ":" + dt.getMinutes();
+        let dt = new Date().toDateString();
+        //return dt.getFullYear() + "-" + (dt.getMonth()+1) + "-" +  dt.getDate() + " Time: " + dt.getHours() + ":" + dt.getMinutes();
+        return dt;
         },
     resetForm: () => {
         document.forms[0].querySelectorAll("[data-properties='toReset']").forEach(select => select.innerHTML = "");

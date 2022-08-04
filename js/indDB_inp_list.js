@@ -45,7 +45,7 @@ let makeOptionsList = function (elem, dataRef) {
 let tmChosenHandler = function (tmark) {
     DD.resetForm();
     DD.form().dataset.doorsTm = tmark;
-    DD.container().dataset.doorsTm = tmark;
+    DD.wrapper().dataset.doorsTm = tmark;
     DD.tmLogoPic().src = eval(`doors.${tmark}.logo`);
 
     makeOptionsList(DD.model(), eval(`doors.${tmark}.model`)); // makes options list of door Models
